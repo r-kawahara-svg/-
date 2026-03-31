@@ -69,7 +69,7 @@ def generate_article(keywords):
 """
     try:
         # 【修正箇所】モデル名を latest に変更
-        model = genai.GenerativeModel('gemini-1.5-flash-latest')
+        model = genai.GenerativeModel('models/gemini-1.5-flash')
         response = model.generate_content(prompt)
         return response.text
     except Exception as e:
